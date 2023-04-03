@@ -1,0 +1,237 @@
+.main_q {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw; */
+    /* height: 100vh; */
+  }
+.principal-question {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 580px;
+    height: 370px;
+    margin: 0 auto;
+}
+.top-question {
+    height: 40px;
+    margin-top: 15px;
+}
+
+.timeleft-content,
+.span-question,
+.bottom-question {
+    margin: 10px 18px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.timeleft-question {
+    display: inline-block;
+}
+
+.position-question {
+    display: inline-block;
+    float: right;
+}
+
+.timeout {
+    margin: 10px 18px;
+}
+
+.time {
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.progress {
+    display: block;
+    height: 6px;
+    background-color: rgb(48, 63, 229);
+    animation: progress 10s ease-out forwards;
+    border-radius: 5px;
+}
+
+.body-question {
+    height: 250px;
+}
+
+.content-question {
+    margin: 10px 18px;
+    font-size: 16px;
+}
+
+.title-question {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.options-question {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    gap: 25px;
+}
+
+.btnoption {
+    background-color: blueviolet;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.btnoption2 {
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.correct {
+    background-color: rgb(83, 187, 83);
+}
+
+.error {
+    background-color: rgb(195, 46, 38);
+}
+
+.btnnext {
+    background-color: rgb(60, 60, 167);
+    border: 1px solid rgb(217, 217, 217);
+    height: 30px;
+    cursor: pointer;
+    color: white;
+    width: 100px;
+    border-radius: 10px;
+    float: right;
+}
+
+.disabled {
+    background-color: rgb(205, 172, 235);
+    color: rgb(234, 234, 234);
+}
+
+.content-show {
+    padding-top: 80px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.punctuation {
+    margin: 50px 10px;
+}
+
+.content-prev button {
+    justify-content: space-between;
+}
+
+.btnPlayAgain {
+    background-color: rgb(26, 108, 39);
+    border: 1px solid rgb(120, 21, 21);
+    height: 30px;
+    cursor: pointer;
+    color: white;
+    width: 130px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.viewAnswer {
+    background-color: rgb(60, 60, 167);
+    border: 1px solid rgb(217, 217, 217);
+    height: 30px;
+    cursor: pointer;
+    color: white;
+    width: 130px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+@keyframes progress {
+    from {
+        width: 100%;
+        background-color: rgb(48, 63, 229);
+    }
+
+    to {
+        width: 0%;
+        background-color: rgb(255, 21, 0);
+
+    }
+}
+
+
+@media (max-width: 767px) {
+    .principal-question {
+        width: 90%;
+        min-height: 80%;
+        margin: 0 auto;
+        border-radius: 0;
+        top: 50%;
+    }
+
+    .top-question {
+        height: 40px;
+        margin-top: 5px;
+    }
+
+    .options-question {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 15px;
+        margin: 5px 0;
+    }
+
+    .btnoption,
+    .btnoption2,
+    .btnPlayAgain,
+    .viewAnswer {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .bottom-question {
+        margin-top: 50%;
+    }
+
+    .content-prev {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .btnnext {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* CSS for screens between 768px and 1023px */
+/* @media (min-width: 768px) and (max-width: 1023px) {
+    .principal-question {
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+    }
+    .options-question {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+  } */
+
+/* CSS for screens larger than 1023px */
+/* @media (min-width: 1024px) {
+    .principal-question {
+      width: 70%;
+      height: auto;
+      margin: 0 auto;
+    }
+  } */
